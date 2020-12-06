@@ -1,0 +1,50 @@
+.bg {
+  &-primary {
+    background: $primary-color !important;
+  }
+  &-info {
+    background: $info-color !important;
+  }
+  &-danger {
+    background: $danger-color !important;
+  }
+  &-success {
+    background: $success-color !important;
+  }
+  &-warning {
+    background: $warning-color !important;
+  }
+  &-dark {
+    background: $dark-color !important;
+  }
+  &-light {
+    background: $light-color !important;
+  }
+  &-secondary {
+    background: $secondary-color !important;
+  }
+}
+
+.text {
+  &-primary {
+    color: $primary-color;
+  }
+  &-secondary {
+    color: $secondary-color;
+  }
+  &-danger {
+    color: $danger-color;
+  }
+  &-success {
+    color: $success-color;
+  }
+  &-warning {
+    color: $warning-color;
+  }
+  &-dark {
+    color: $dark-color;
+  }
+  &-light {
+    color: $light-color;
+  }
+}
