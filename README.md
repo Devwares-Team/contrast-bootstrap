@@ -43,7 +43,7 @@ yarn add cdbootstrap
 
 ## PRO Version
 
-[Contrast Design Bootstrap PRO](https://www.devwares.com/product/bootstrap/contrast-pro)
+[Contrast Design Bootstrap PRO](https://www.devwares.com/product/bootstrap-contrast-pro)
 
 ## License
 
