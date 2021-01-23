@@ -1,0 +1,77 @@
+.cs-form {
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    input[type=date], input[type=datetime-local],
+    input[type=email], input[type=number], input[type=password],
+    input[type=search-md], input[type=search], input[type=tel],
+    input[type=text], input[type=time], input[type=url], textarea {
+        background-color: transparent;
+        border-radius: 0;
+        outline: none;
+        height: 3rem;
+        width: 100%;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: all .3s;
+        transition: all .3s
+    }
+
+    label {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        transition: all 0.3s;
+        font-weight: normal;
+    }
+
+    .form-control {
+        padding: 0.5rem 0.6rem;
+
+        &:focus {
+            border-color: $primary-color;
+            
+        }
+
+        &:focus ~ label {
+            left: 5px;
+            top: -10px;
+            background: $white-color;
+            padding: 0 5px;
+            font-size: 12px;
+            color: $primary-color;
+        }
+    }
+
+    .prefix {
+        position: absolute;
+        width: 2rem;
+        font-size: 2rem;
+        -webkit-transition: color .2s;
+        transition: color .2s;
+        top:5px;
+    }
+
+    .prefix ~ input  {
+        margin-left: 2rem;
+        width: calc(100% - 2rem);
+    }
+
+    .prefix ~ label {
+        margin-left: 2rem;
+    }
+}
+
+.form-sm {
+    input[type=date], input[type=datetime-local],
+    input[type=email], input[type=number], input[type=password],
+    input[type=search-md], input[type=search], input[type=tel],
+    input[type=text], input[type=time], input[type=url], textarea {
+        height: 1.5rem;
+    }
+
+    label {
+        top: 5px;
+        font-size: 13px;
+    }
+}

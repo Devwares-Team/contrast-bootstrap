@@ -1,0 +1,26 @@
+.cprogress-bar {
+  display: inline-block;
+  width: 275px;
+  height: 275px;
+  margin: 7px;
+  padding: 0;
+}
+.cprogress-bar .progress-active {
+  position: relative;
+  top: -279px;
+}
+.cprogress-bar p {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 275px;
+  top: -460px;
+  font-size: 54px;
+  font-weight: 900;
+  text-align: center;
+}
+#progressControllerContainer {
+  position: absolute;
+  top: 320px;
+  padding: 10px 80px;
+}

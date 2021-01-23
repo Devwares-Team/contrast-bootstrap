@@ -1,0 +1,48 @@
+.pagination {
+  margin: auto;
+  padding: 15px;
+  border: 0.5px solid #ccc;
+  border-radius: 0;
+
+  .page-item {
+    .page-link {
+      background: $dark-color;
+      color: $white-color;
+      min-width: 50px;
+      min-height: 50px;
+      margin: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-round {
+        border-radius: 50%;
+      }
+
+    }
+  }
+
+  &-lg {
+    padding: 18px;
+    .page-item {
+      .page-link {
+        min-width: 65px;
+        min-height: 65px;
+      }
+    }
+  }
+
+  &-sm {
+    padding: 5px;
+    .page-item {
+      .page-link {
+        min-width: 25px;
+        min-height: 25px;
+        margin: 0.3rem;
+        font-size: 0.65rem;
+      }
+    }
+  }
+}

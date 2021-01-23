@@ -1,6 +1,5 @@
 export function Sidebar(element) {
   const color = element.getAttribute('color');
-  console.log(color);
   function addEvents() {
     if (color !== null) {
       element.classList.add('sidebar-white');
@@ -27,11 +26,35 @@ export function Sidebar(element) {
     });
   }
   addEvents();
-  window.addEventListener('DOMContentLoaded', function () {
+  function makeSmall() {
     if (window.innerWidth < 768) {
       element.classList.add('sidebar--mobile');
+      element.querySelector('.sidebar-brand')
+        .classList.add('sidebar-brand-none');
     } else {
       element.classList.remove('sidebar--mobile');
+      element.querySelector('.sidebar-brand')
+        .classList.remove('sidebar-brand-none');
     }
-  });
+  }
+
+  const route = window.location.href;
+  function activeRoute(link) {
+    element.querySelectorAll(link).forEach(item => {
+      const to = item.href;
+      if(to){
+        if(to === route){
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      }
+    })
+  }
+
+  window.addEventListener('DOMContentLoaded', makeSmall);
+  window.addEventListener('resize', makeSmall);
+
+  activeRoute('.sidebar-item');
+  activeRoute('.sub-menu-item');
 }

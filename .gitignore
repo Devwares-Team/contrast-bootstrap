@@ -14,16 +14,7 @@ templates
 /js/data-tables.js
 /js/index.js
 /js/iframe.js
-/js/date-picker.js
-/js/multi-select.js
-/js/notification.js
-/js/popper.min.js
 /js/progress.js
 /js/rating.js
-
 /js/sidebar.js
-
-/js/stepper.js
 /js/utils.js
-
-

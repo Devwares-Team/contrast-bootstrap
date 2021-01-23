@@ -1,0 +1,57 @@
+.custom-switch { //switch component 
+
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+
+    input {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+
+    .custom-control {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $light-color;
+        -webkit-transition: .4s;
+        transition: .4s;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 24px;
+            width: 24px;
+            left: 1px;
+            bottom: 1px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+
+    input:checked + .custom-control {
+        background-color: #2196F3;
+    }
+      
+    input:checked + .custom-control:before {
+        -webkit-transform: translateX(24px);
+        -ms-transform: translateX(24px);
+        transform: translateX(24px);
+    }
+
+    &-rounded { //for curved borders
+
+        .custom-control {
+            border-radius: 26px;
+            &:before {
+                border-radius: 50%;
+            }
+        }
+    }
+}

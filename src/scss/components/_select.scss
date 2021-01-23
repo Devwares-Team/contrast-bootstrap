@@ -1,0 +1,60 @@
+.select {
+  padding: 10px 5px;
+  width: max-content;
+  outline: none;
+  &-primary {
+    color: $primary-color;
+    border-color: $primary-color;
+    background: #e6e6ff;
+  }
+
+  &-secondary {
+    color: $secondary-color;
+    border-color: $secondary-color;
+    background-color: #f0edf828;
+  }
+  &-success {
+    color: $success-color;
+    border-color: $success-color;
+    background-color: #7a997a28;
+  }
+  &-danger {
+    color: $danger-color;
+    border-color: $danger-color;
+    background-color: #fce9e9;
+  }
+  &-warning {
+    color: $warning-color;
+    border-color: $warning-color;
+    background-color: #fffbe6;
+  }
+  &-dark {
+    color: $white-color;
+    border-color: $dark-color;
+    background-color: #33333328;
+  }
+
+  option {
+    color: #000;
+    background: #fff;
+    max-height: 0px;
+    overflow-y: scroll;
+    transition: inherit;
+    &::-webkit-scrollbar {
+      width: 3px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: #ccc;
+    }
+  }
+  &-sm {
+    padding: 5px 5px;
+  }
+
+  &-lg {
+    padding: 20px 10px;
+  }
+}

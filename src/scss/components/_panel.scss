@@ -1,0 +1,53 @@
+.panel {
+  width: 300px;
+  border: 1px #ccc solid;
+  background-color: #ffffff;
+  background-clip: border-box;
+
+  &-title {
+    margin: 5px 0px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  &-body {
+    padding: 20px;
+  }
+  &-text {
+    margin: 0px 0px 10px 0px;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    &-sm {
+      font-size: 0.75rem;
+    }
+  }
+  &-img {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .text-muted {
+    opacity: 0.6;
+  }
+
+  &-menu {
+    font-size: 30px;
+  }
+
+  .chip {
+    margin: 20px 0px 0px 0px;
+
+    &-img {
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &-item {
+      font-size: 0.8em;
+    }
+  }
+}

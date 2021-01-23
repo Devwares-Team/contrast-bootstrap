@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+/* Modal */
+
+.modal {
+  &-header {
+    border-bottom: 1px solid $light-color;
+    border-radius: 0;
+    .close {
+      outline: none;
+      background-color: transparent;
+      border: 0;
+    }
+  }
+  &-content {
+    border-radius: 0;
+  }
+  &-top-right {
+    position: absolute;
+    top: 10px;
+    bottom: auto;
+    right: 10px;
+    left: auto;
+  }
+  &-top-left {
+    position: absolute;
+    top: 10px;
+    bottom: auto;
+    right: auto;
+    left: 10px;
+  }
+  &-bottom-left {
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    right: auto;
+    left: 10px;
+  }
+  &-bottom-right {
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    left: auto;
+  }
+  &-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+  }
+}

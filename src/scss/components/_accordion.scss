@@ -9,7 +9,7 @@
     padding: 10px;
     .accordion-header.no-icon {
       &::after {
-        content: "" !important;
+        content: '' !important;
       }
     }
     .accordion-header {
@@ -17,7 +17,6 @@
       font-size: 18px;
       width: 100%;
       padding: 10px 15px;
-      box-sizing: border-box;
       display: block;
       cursor: pointer;
       transition: 0.25s ease;
@@ -27,7 +26,7 @@
         font-family: FontAwesome;
         font-weight: lighter;
         font-size: 15px;
-        content: "\f078";
+        content: '\f078';
         text-align: center;
         width: 15px;
         position: absolute;
@@ -61,7 +60,7 @@
       .accordion-header {
         &::after {
           transform: rotate(180deg);
-          content: "\f078";
+          content: '\f078';
         }
       }
     }

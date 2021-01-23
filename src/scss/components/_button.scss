@@ -1,0 +1,124 @@
+.container-buttons {
+  width: 95%;
+  margin: auto;
+}
+
+.btn {
+  border-radius: 0;
+  padding: 0 1rem;
+  margin-right: 1rem;
+  font-weight: 400;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 10px 20px;
+  &-primary {
+    border-color: $primary-color;
+    background: $primary-color;
+    &:active {
+      outline-color: $primary-color;
+    }
+  }
+  &-secondary {
+    border-color: $secondary-color;
+    background: $secondary-color;
+  }
+  &-success {
+    background: $success-color;
+    border-color: $success-color;
+  }
+  &-danger {
+    background: $danger-color;
+    border-color: $danger-color;
+  }
+  &-warning {
+    background: $warning-color;
+    color: #fff;
+    border-color: $warning-color;
+  }
+  &-info {
+    color: #fff;
+    background: $info-color;
+    border-color: $info-color;
+  }
+  &-light {
+    background: $light-color;
+    border-color: $light-color;
+  }
+  &-dark {
+    background: $dark-color;
+    border-color: $dark-color;
+    color: #fff;
+  }
+
+  &-outline {
+    &-primary {
+      border-color: $primary-color;
+      &:active {
+        background: $primary-color;
+      }
+    }
+    &-secondary {
+      border-color: $secondary-color;
+      &:active {
+        background: $secondary-color;
+      }
+    }
+    &-dark {
+      border-color: $dark-color;
+
+      &:active {
+        background: $dark-color;
+      }
+    }
+    &-success {
+      border-color: $success-color;
+      &:active {
+        background: $success-color;
+      }
+    }
+    &-light {
+      border-color: $light-color;
+      color: $light-color;
+      background: transparent;
+      &:active {
+        background: white;
+        color: #000;
+      }
+    }
+    &-warning {
+      border-color: $warning-color;
+
+      &:active {
+        background: $warning-color;
+      }
+    }
+    &-info {
+      border-color: $info-color;
+      &:active {
+        background: $info-color;
+      }
+    }
+  }
+
+  //   Rounded buttons
+  &-rounded {
+    border-radius: 30px;
+  }
+
+  //   With icons
+
+  i {
+    margin: 0 0.5rem;
+  }
+  &-flat {
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &-lg {
+    padding: 20px 40px;
+  }
+  &-sm {
+    padding: 5px 10px;
+  }
+}

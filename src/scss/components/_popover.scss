@@ -1,0 +1,9 @@
+.popover {
+  border-width: 2px;
+  border-radius: 0;
+  &-arrow {
+    &::after {
+      border-width: 2px;
+    }
+  }
+}

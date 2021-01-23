@@ -1,11 +1,7 @@
 {
   "name": "contrast-bootstrap-free",
   "version": "1.0.0",
-  "description": "",
-  "main": "cdb.js",
-  "scripts": {
-    "build": "webpack"
-  },
+  "main": "js/cdb.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Devwares-Team/contrast-bootstrap-free.git"
@@ -16,11 +12,5 @@
     "url": "https://github.com/Devwares-Team/contrast-bootstrap-free/issues"
   },
   "homepage": "https://github.com/Devwares-Team/contrast-bootstrap-free#readme",
-  "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.12.7",
-    "babel-loader": "^8.2.2",
-    "webpack": "^5.10.0",
-    "webpack-cli": "^4.2.0"
-  }
+  "description": ""
 }

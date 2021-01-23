@@ -1,0 +1,51 @@
+.container-list-group {
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.list-group {
+  &-item {
+    padding: 0.75rem 1.25rem;
+    &:first-child,
+    &:last-child {
+      border-radius: 0;
+    }
+
+    &-secondary {
+      background: $secondary-color;
+      color: #fff;
+    }
+    &-primary {
+      background: $primary-color;
+      color: #fff;
+    }
+    &-dark {
+      background: $dark-color;
+      color: #fff;
+    }
+    &-info {
+      background: $info-color;
+      color: #fff;
+    }
+    &-light {
+      background: $light-color;
+    }
+    &-success {
+      background: $success-color;
+      color: #fff;
+    }
+    &-warning {
+      background: $warning-color;
+
+      color: #fff;
+    }
+    &-danger {
+      background: $danger-color;
+      color: #fff;
+    }
+    &-dark {
+      background: $dark-color;
+      color: #fff;
+    }
+  }
+}

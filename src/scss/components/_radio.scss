@@ -1,0 +1,155 @@
+.custom-radio {
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    &-inline {
+        display: inline;
+    }
+
+    &-input {
+        visibility: hidden;
+
+        & + label {
+            cursor: pointer;
+        }
+
+        & + label:before {
+            display: inline-block;
+            height: 0.9rem;
+            width: 0.9rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+            transition: all 0.15s ease-in-out 0s;
+            border: 0.2rem solid currentColor;
+            background-color: transparent;
+            color: $dark-color;
+            content: "\00a0";
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:hover + label:before { 
+            box-shadow: rgba(0, 0, 0, 0.46) 0px 0px 0px 0.4rem;
+        }
+
+        &:checked + label:before {
+            background-color: currentColor;
+            box-shadow: currentColor 0px 0px 0px 0.2rem;
+        }
+    }
+    
+    .text { //radio box colors
+        &-primary {
+          & + label:before {
+            color: $primary-color;
+          }
+
+          &:hover + label:before { //hover effect
+            box-shadow: currentColor 0px 0px 0px 0.4rem;
+          }
+
+          &:checked + label:before { //checked effect
+            background-color: currentColor;
+            box-shadow: currentColor 0px 0px 0px 0.2rem;
+          }
+        }
+        &-secondary {
+          & + label:before {
+            color: $secondary-color;
+          }
+
+          &:hover + label:before { //hover effect
+            box-shadow: currentColor 0px 0px 0px 0.4rem;
+          }
+
+          &:checked + label:before { //checked effect
+            background-color: currentColor;
+            box-shadow: currentColor 0px 0px 0px 0.2rem;
+          }
+        }
+        &-danger {
+          & + label:before {
+            color: $danger-color;
+          }
+
+          &:hover + label:before { //hover effect
+            box-shadow: currentColor 0px 0px 0px 0.4rem;
+          }
+
+          &:checked + label:before { //checked effect
+            background-color: currentColor;
+            box-shadow: currentColor 0px 0px 0px 0.2rem;
+          }
+        }
+        &-success {
+          & + label:before {
+            color: $success-color;
+          }
+
+          &:hover + label:before { //hover effect
+            box-shadow: currentColor 0px 0px 0px 0.4rem;
+          }
+
+          &:checked + label:before { //checked effect
+            background-color: currentColor;
+            box-shadow: currentColor 0px 0px 0px 0.2rem;
+          }
+        }
+        &-warning {
+          & + label:before {
+            color: $warning-color;
+          }
+
+          &:hover + label:before { //hover effect
+            box-shadow: currentColor 0px 0px 0px 0.4rem;
+          }
+
+          &:checked + label:before { //checked effect
+            background-color: currentColor;
+            box-shadow: currentColor 0px 0px 0px 0.2rem;
+          }
+        }
+        &-dark {
+          & + label:before {
+            color: $dark-color;
+          }
+
+          &:hover + label:before { //hover effect
+            box-shadow: currentColor 0px 0px 0px 0.4rem;
+          }
+
+          &:checked + label:before { //checked effect
+            background-color: currentColor;
+            box-shadow: currentColor 0px 0px 0px 0.2rem;
+          }
+        }
+        &-light {
+          & + label:before {
+            color: $light-color;
+          }
+
+          &:hover + label:before { //hover effect
+            box-shadow: currentColor 0px 0px 0px 0.4rem;
+          }
+
+          &:checked + label:before { //checked effect
+            background-color: currentColor;
+            box-shadow: currentColor 0px 0px 0px 0.2rem;
+          }
+        }
+        &-info {
+          & + label:before {
+            color: $info-color;
+          }
+
+          &:hover + label:before { //hover effect
+            box-shadow: currentColor 0px 0px 0px 0.4rem;
+          }
+
+          &:checked + label:before { //checked effect
+            background-color: currentColor;
+            box-shadow: currentColor 0px 0px 0px 0.2rem;
+          }
+        }
+        
+    }
+}

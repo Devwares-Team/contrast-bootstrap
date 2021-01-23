@@ -1,6 +1,6 @@
 
 
-# Contrast Design Bootstrap (Free)
+# Contrast Design Bootstrap (PRO)
 
 > Elegant UI Kit and reusable components for building mobile-first, responsive webistes and web apps
 
@@ -43,7 +43,7 @@ yarn add cdbootstrap
 
 ## PRO Version
 
-[Contrast Design Bootstrap PRO](https://www.devwares.com/product/bootstrap/contrast-pro)
+[Contrast Design Bootstrap PRO](https://www.devwares.com/product/bootstrap-contrast-pro)
 
 ## License
 

@@ -1,0 +1,40 @@
+.container-alert {
+  margin: 'auto';
+  width: '80%';
+  display: 'flex';
+  flex-direction: 'column';
+  align-items: 'center';
+  justify-content: 'center';
+  min-height: '100vh';
+  margin-top: 2rem;
+}
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: #fff;
+  &-primary {
+    background: $primary-color;
+  }
+  &-secondary {
+    background: $secondary-color;
+  }
+  &-success {
+    background: $success-color;
+  }
+  &-danger {
+    background: $danger-color;
+  }
+  &-warning {
+    background: $warning-color;
+  }
+  &-info {
+    background: $info-color;
+  }
+  &-dark {
+    background: $dark-color;
+  }
+}

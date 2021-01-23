@@ -1,0 +1,23 @@
+.btn-group{
+    .btn{
+        margin-right: 0px;
+
+        //  Rounded buttons
+        &-rounded {
+            border-radius: 30px !important;
+        }
+    }
+
+    //vertical alignment
+    &-vertical{
+        .btn{
+            margin-bottom: 0px;
+        }
+    }
+
+    &-lg{
+        .btn{
+            padding: 20px 40px;
+        }
+    }
+}

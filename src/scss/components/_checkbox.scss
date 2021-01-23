@@ -1,0 +1,114 @@
+.custom-check {
+  &-inline {
+    display: inline;
+  }
+
+  &-input {
+    visibility: hidden;
+
+    & + label:before {
+      width: 18px;
+      height: 18px;
+      background: $white-color;
+      border: 1px solid $light-color;
+      margin-right: 10px;
+      content: '\00a0';
+      display: inline-block;
+    }
+
+    &:checked + label:before {
+      background: $white-color;
+      border: 1px solid $dark-color;
+      color: $dark-color;
+      content: '\2713';
+      text-align: center;
+    }
+  }
+
+  &-label {
+  }
+
+  .bg {
+    //background colors
+    &-primary + label:before {
+      background: $primary-color !important;
+    }
+    &-info + label:before {
+      background: $info-color !important;
+    }
+    &-danger + label:before {
+      background: $danger-color !important;
+    }
+    &-success + label:before {
+      background: $success-color !important;
+    }
+    &-warning + label:before {
+      background: $warning-color !important;
+    }
+    &-dark + label:before {
+      background: $dark-color !important;
+    }
+    &-light + label:before {
+      background: $light-color !important;
+    }
+    &-secondary + label:before {
+      background: $secondary-color !important;
+    }
+  }
+
+  .text {
+    //check box colors
+    &-primary:checked + label:before {
+      color: $primary-color;
+    }
+    &-secondary:checked + label:before {
+      color: $secondary-color;
+    }
+    &-danger:checked + label:before {
+      color: $danger-color;
+    }
+    &-success:checked + label:before {
+      color: $success-color;
+    }
+    &-warning:checked + label:before {
+      color: $warning-color;
+    }
+    &-dark:checked + label:before {
+      color: $dark-color;
+    }
+    &-light:checked + label:before {
+      color: $light-color;
+    }
+    &-info:checked + label:before {
+      color: $info-color;
+    }
+  }
+
+  .border {
+    // border colors
+    &-primary + label:before {
+      border: 1px solid $primary-color;
+    }
+    &-info + label:before {
+      border: 1px solid $info-color;
+    }
+    &-danger + label:before {
+      border: 1px solid $danger-color;
+    }
+    &-success + label:before {
+      border: 1px solid $success-color;
+    }
+    &-warning + label:before {
+      border: 1px solid $warning-color;
+    }
+    &-dark + label:before {
+      border: 1px solid $dark-color;
+    }
+    &-light + label:before {
+      border: 1px solid $light-color;
+    }
+    &-secondary + label:before {
+      border: 1px solid $secondary-color;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.table {
+  thead tr th {
+    border-bottom-color: $light-color;
+  }
+
+  &-primary {
+    th,
+    td {
+      color: #fff;
+      background: $primary-color;
+    }
+  }
+  &-secondary {
+    th,
+    td {
+      color: #fff;
+      background: $secondary-color;
+    }
+  }
+  &-success {
+    th,
+    td {
+      color: #fff;
+      background: $success-color;
+    }
+  }
+  &-danger {
+    th,
+    td {
+      color: #fff;
+      background: $danger-color;
+    }
+  }
+  &-warning {
+    th,
+    td {
+      color: #fff;
+      background: $warning-color;
+    }
+  }
+  &-info {
+    th,
+    td {
+      color: #fff;
+      background: $info-color;
+    }
+  }
+  &-info {
+    th,
+    td {
+      color: #fff;
+      background: $info-color;
+    }
+  }
+  &-light {
+    th,
+    td {
+      color: #fff;
+      background: $light-color;
+    }
+  }
+  &-dark {
+    th,
+    td {
+      color: #fff;
+      background: $dark-color;
+    }
+  }
+}
+
+// Stripped rows
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background: $light-color;
+  color: $dark-color;
+}
+
+.table-dark th,
+.table-dark td {
+  background: $dark-color;
+}

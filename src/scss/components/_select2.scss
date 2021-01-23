@@ -1,0 +1,37 @@
+.select2 {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 15px;
+  &-primary {
+    color: $primary-color;
+    border-color: $primary-color;
+    background: #e6e6ff;
+  }
+
+  &-secondary {
+    color: $secondary-color;
+    border-color: $secondary-color;
+    background-color: #f0edf8;
+  }
+  &-success {
+    color: $success-color;
+    border-color: $success-color;
+    background-color: #e7fae7;
+  }
+  &-danger {
+    color: $danger-color;
+    border-color: $danger-color;
+    background-color: #fce9e9;
+  }
+  &-warning {
+    color: $warning-color;
+    border-color: $warning-color;
+    background-color: #fffbe6;
+  }
+  &-dark {
+    color: $white-color;
+    border-color: $dark-color;
+    background-color: #333333;
+  }
+
+}

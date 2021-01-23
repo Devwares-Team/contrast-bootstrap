@@ -1,0 +1,53 @@
+.icon {
+    font-size: 24px;
+    &-border { //icons with border
+        padding: 2px 3px;
+        border: 0.5px solid $light-color;
+    }
+
+    &-spin { //spinning icons 
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+
+    &-pull { //pull icon
+        float: left;
+    }
+
+    &-pulse { //pulse icon
+        animation: spin 1s steps(8) infinite;
+    }
+
+    &-rotate {
+        transform: rotate(180deg);
+    }
+
+    &-sm { //small size;
+        font-size: 15px;
+    }
+
+    &-lg { //large size;
+        font-size: 35px;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+    }
+    @keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+}

@@ -1,0 +1,23 @@
+.star-rating {
+  margin-top: 2.5rem;
+  .star {
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+    position: relative;
+    .star-notification {
+      display: flex;
+      width: fit-content;
+      position: absolute;
+      top: -100%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      background: #333;
+      padding: 7.5px;
+      border-radius: 0;
+      color: #fff !important;
+      transition: 0.2s;
+    }
+  }
+}

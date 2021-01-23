@@ -1,0 +1,85 @@
+.example .progress {
+  margin-bottom: 1rem;
+}
+.progress-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.progress {
+  width: 100%;
+  border-radius: 20px;
+  height: 10px;
+  &-bar {
+    border-radius: 20px;
+  }
+  &-primary {
+    background: #3e98c728;
+    .progress-bar {
+      background: $primary-color;
+    }
+  }
+  &-secondary {
+    background: #7356bf28;
+    .progress-bar {
+      background: $secondary-color;
+    }
+  }
+  &-success {
+    background: #05944f28;
+    .progress-bar {
+      background: $success-color;
+    }
+  }
+  &-danger {
+    background: #e1190028;
+    .progress-bar {
+      background: $danger-color;
+    }
+  }
+  &-warning {
+    background: #66512c28;
+    .progress-bar {
+      background: $warning-color;
+    }
+  }
+  &-info {
+    background: #17a2b828;
+    .progress-bar {
+      background: $info-color;
+    }
+  }
+  &-dark {
+    background: #00000028;
+    .progress-bar {
+      background: $dark-color;
+    }
+  }
+  &-text {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    &-primary {
+      color: $primary-color;
+    }
+    &-secondary {
+      color: $secondary-color;
+    }
+    &-success {
+      color: $success-color;
+    }
+    &-danger {
+      color: $danger-color;
+    }
+    &-warning {
+      color: $warning-color;
+    }
+    &-info {
+      color: $info-color;
+    }
+    &-dark {
+      color: $dark-color;
+    }
+  }
+}
