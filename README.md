@@ -22,10 +22,10 @@ yarn add cdbootstrap
 ## Usage
 
 ```jsx
-    <link rel="stylesheet" href="./node_modules/contrast-bootstrap-pro/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./node_modules/contrast-bootstrap-pro/css/cdb.css"/>
-    <script src="./node_modules/contrast-bootstrap-pro/js/bootstrap.min.js"></script>
-    <script src="./node_modules/contrast-bootstrap-pro/js/cdb.js"></script>
+    <link rel="stylesheet" href="./node_modules/contrast-bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./node_modules/contrast-bootstrap/css/cdb.css"/>
+    <script src="./node_modules/contrast-bootstrap/js/bootstrap.min.js"></script>
+    <script src="./node_modules/contrast-bootstrap/js/cdb.js"></script>
 ```
 
 # Browser support
