@@ -222,6 +222,7 @@
 
 .alert-warning {
   background: #ffe975;
+  color: #735909;
 }
 
 .alert-info {
@@ -4349,9 +4350,10 @@
   }
 }
 
+
 .pagination {
   margin: auto;
-  padding: 15px;
+  padding: 10px;
   border: 0.5px solid #ccc;
   border-radius: 0;
 }
@@ -4359,9 +4361,7 @@
 .pagination .page-item .page-link {
   background: #000000;
   color: #ffffff;
-  min-width: 50px;
-  min-height: 50px;
-  margin: 0.7rem;
+  margin: 0.4rem;
   border: 1px solid #ccc;
   border-radius: 0;
   display: -webkit-box;
@@ -4380,12 +4380,12 @@
 }
 
 .pagination-lg {
-  padding: 18px;
+  padding: 15px;
 }
 
 .pagination-lg .page-item .page-link {
-  min-width: 65px;
-  min-height: 65px;
+  min-width: 45px;
+  min-height: 45px;
 }
 
 .pagination-sm {
