@@ -156,10 +156,12 @@
 
 .cdb-accordion .accordion .accordion-panel {
   overflow: hidden;
-  -webkit-transition-property: height, visibility;
-  transition-property: height, visibility;
+  -webkit-transition-property: max-height, visibility;
+  transition-property: max-height, visibility;
   -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+      transition-timing-function: ease;
+  -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
   padding: 0 1.5%;
 }
 
@@ -171,10 +173,18 @@
   visibility: visible;
 }
 
-.cdb-accordion .accordion.is-active .accordion-header::after {
+.cdb-accordion .accordion.active .accordion-header::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  content: "\f078";
+  content: '\f078';
+}
+
+.accordion .accordion-panel {
+  max-height:0px;
+}
+
+.accordion.active .accordion-panel {
+  max-height:1000px;
 }
 
 .container-alert {
@@ -3627,7 +3637,7 @@
 
 .btn-warning {
   background: #ffe975;
-  color: #fff;
+  color: #735909;
   border-color: #ffe975;
 }
 
@@ -4174,7 +4184,7 @@
 
 .list-group-item-warning {
   background: #ffe975;
-  color: #fff;
+  color: #735909;
 }
 
 .list-group-item-danger {
@@ -4865,7 +4875,7 @@
 
 .table-warning th,
 .table-warning td {
-  color: #fff;
+  color: #735909;
   background: #ffe975;
 }
 
@@ -5216,4 +5226,69 @@
   text-align: center;
   padding: 10px 0px;
 }
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.bg-primary {
+  background: #276ef1 !important;
+}
+
+.bg-info {
+  background: #17a2b8 !important;
+}
+
+.bg-danger {
+  background: #e11900 !important;
+}
+
+.bg-success {
+  background: #05944f !important;
+}
+
+.bg-warning {
+  background: #ffe975 !important;
+}
+
+.bg-dark {
+  background: #000000 !important;
+}
+
+.bg-light {
+  background: #eeeeee !important;
+}
+
+.bg-secondary {
+  background: #7356bf !important;
+}
+
+.text-primary {
+  color: #276ef1;
+}
+
+.text-secondary {
+  color: #7356bf;
+}
+
+.text-danger {
+  color: #e11900;
+}
+
+.text-success {
+  color: #05944f;
+}
+
+.text-warning {
+  color: #ffe975;
+}
+
+.text-dark {
+  color: #000000;
+}
+
+.text-light {
+  color: #eeeeee;
+}
+
 /*# sourceMappingURL=cdb.css.map */
