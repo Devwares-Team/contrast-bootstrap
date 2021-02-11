@@ -144,7 +144,7 @@
   text-align: center;
   width: 15px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -5162,21 +5162,46 @@
 }
 
 .sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu {
-  width: 180px;
+  width:initial;
+  max-width: 200px;
   margin: 0px;
-  position: absolute;
-  left: 40px;
-  top: 0px;
   display: none;
 }
 
 .sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu .sub-menu-item {
-  padding: 10px 0px 10px 50px;
+  display:none;
+  font-size:13px;
+  padding:5px 0px 5px 20px;
+}
+
+.sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu .sub-menu-item:first-child {
+  padding-top:15px;
+}
+.sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu .sub-menu-item:last-child {
+  padding-bottom:15px;
+}
+
+.sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu[data-show] {
+  display:block;
+  background: transparent;
+}
+
+.sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu[data-show] .sub-menu-item {
+  display:block;
+  margin-left:30px;
+  margin-right: 0px;
+  width:100%;
+  background: #333;
+}
+
+.sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu .sidebar-icon {
+  display:none;
 }
 
 .sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu .sidebar-dropdown:hover .collapse {
   display: block;
 }
+
 
 .sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu .sidebar-dropdown .collapse {
   display: none;
@@ -5194,11 +5219,6 @@
 .sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .sidebar-sub-menu .sidebar-dropdown .sidebar-sub-menu {
   left: 0px !important;
   top: 50px !important;
-}
-
-.sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown:hover .collapse {
-  display: block;
-  background: #333;
 }
 
 .sidebar--mobile .sidebar-container .sidebar-nav .sidenav .sidebar-dropdown .active {

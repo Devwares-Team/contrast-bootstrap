@@ -57,4 +57,61 @@ export function Sidebar(element) {
 
   activeRoute('.sidebar-item');
   activeRoute('.sub-menu-item');
+
+  const dropdown = element.querySelectorAll('.sidebar-dropdown');
+        
+  dropdown.forEach(item => {
+    const button = item.querySelector('.sidebar-item');
+    const tooltip = item.querySelector('.sidebar-sub-menu');
+    let popperInstance = null;
+
+    function create() {
+      popperInstance = Popper.createPopper(button, tooltip, {
+        placement: 'right',
+        strategy: 'fixed',
+        modifiers: [
+          {
+            name: 'computeStyles',
+            options: {
+              adaptive: false,
+            },
+          },
+        ],
+      });
+    }
+
+    function destroy() {
+      if (popperInstance) {
+        popperInstance.destroy();
+        popperInstance = null;
+      }
+    }
+
+    function show() {
+      if (sidebar.offsetWidth < 100) {
+        tooltip.setAttribute('data-show', '');
+        create();
+      }
+    }
+
+    function hide() {
+      if (sidebar.offsetWidth < 100) {
+        tooltip.removeAttribute('data-show');
+        destroy();
+      }
+    }
+
+    const showEvents = ['mouseenter', 'focus'];
+    const hideEvents = ['mouseleave', 'blur'];
+
+    showEvents.forEach(event => {
+      button.addEventListener(event, show);
+      tooltip.addEventListener(event, show);
+    });
+
+    hideEvents.forEach(event => {
+      button.addEventListener(event, hide);
+      tooltip.addEventListener(event, hide);
+    });
+  });
 }
