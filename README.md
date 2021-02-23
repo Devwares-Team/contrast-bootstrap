@@ -1,6 +1,6 @@
 # Contrast Design Bootstrap (Free)
 
-> Elegant UI Kit and reusable components for building mobile-first, responsive webistes and web apps
+> Bootstrap 5 Multipurpose template, UI kit to build your next landing, admin, SAAS, prelaunch, etc project with a clean, well crafted template and UI components
 
 [![NPM](https://img.shields.io/npm/v/cdbootstrap.svg)](https://www.npmjs.com/package/cdbootstrap) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ![npm](https://img.shields.io/npm/dw/cdbootstrap)

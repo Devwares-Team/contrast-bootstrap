@@ -2,6 +2,7 @@ node_modules
 webpack.config.js
 package.lock.json
 .babelrc
+contrast-bootstrap-free-1.0.0.tgz
 templates
 /css/abstracts
 /css/components
