@@ -30,16 +30,12 @@ yarn add cdbootstrap
 
 ## Pages
 
-<a href="https://www.devwares.com/product/javascript/admin-contrast">
+<a href="https://www.devwares.com/product/bootstrap-admin-contrast">
 <img src="https://res.cloudinary.com/devwares/image/upload/v1610800617/s1_opnshi.png" width="80%" height="auto"/>
 </a>
 
-<a href="https://www.devwares.com/product/javascript/admin-contrast">
+<a href="https://www.devwares.com/product/bootstrap-admin-contrast">
 <img src="https://res.cloudinary.com/devwares/image/upload/v1610800671/s2_yw3dmx.png" width="80%" height="auto"/>
-</a>
-
-<a href="https://www.devwares.com/product/javascript/admin-contrast">
-<img src="https://res.cloudinary.com/devwares/image/upload/v1610800656/hero3_cuqjtc.png" width="80%" height="auto"/>
 </a>
 
 ## Carousel
@@ -54,19 +50,19 @@ yarn add cdbootstrap
 
 ## Dashboards
 
-<a href="https://www.devwares.com/product/admin-contrast">
+<a href="https://www.devwares.com/product/bootstrap-admin-contrast">
 <img src="https://res.cloudinary.com/devwares/image/upload/v1610800575/dash1_ccd7xr.png" width="80%" height="auto"/>
 </a>
 
-<a href="https://www.devwares.com/product/admin-contrast">
+<a href="https://www.devwares.com/product/bootstrap-admin-contrast">
 <img src="https://res.cloudinary.com/devwares/image/upload/v1610800596/dash2_bvzv7z.png" width="80%" height="auto"/>
 </a>
 
-<a href="https://www.devwares.com/product/admin-contrast">
+<a href="https://www.devwares.com/product/bootstrap-admin-contrast">
 <img src="https://res.cloudinary.com/devwares/image/upload/v1610800576/dash3_tfcfuf.png" width="80%" height="auto"/>
 </a>
 
-<a href="https://www.devwares.com/product/admin-contrast">
+<a href="https://www.devwares.com/product/bootstrap-admin-contrast">
 <img src="https://res.cloudinary.com/devwares/image/upload/v1610800566/dash4_kvqco1.png" width="80%" height="auto"/>
 </a>
 
