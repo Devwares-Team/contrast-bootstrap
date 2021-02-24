@@ -1,4 +1,4 @@
-# Contrast Design Bootstrap (Free)
+# Contrast Design Bootstrap
 
 > Bootstrap 5 Multipurpose template, UI kit to build your next landing, admin, SAAS, prelaunch, etc project with a clean, well crafted template and UI components
 
@@ -20,10 +20,11 @@ yarn add cdbootstrap
 ## Usage
 
 ```jsx
-    <link rel="stylesheet" href="./node_modules/contrast-bootstrap-free/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./node_modules/contrast-bootstrap-free/css/cdb.css"/>
-    <script src="./node_modules/contrast-bootstrap-free/js/bootstrap.min.js"></script>
-    <script src="./node_modules/contrast-bootstrap-free/js/cdb.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/css/cdb.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/js/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/js/cdb.min.js"></script>
 ```
 
 # Demo
