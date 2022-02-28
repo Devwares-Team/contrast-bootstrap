@@ -1,6 +1,6 @@
 {
   "name": "cdbootstrap",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "js/cdb.js",
   "repository": {
     "type": "git",
