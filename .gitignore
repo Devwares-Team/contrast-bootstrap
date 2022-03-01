@@ -4,6 +4,7 @@ package.lock.json
 .babelrc
 contrast-bootstrap-free-1.0.0.tgz
 templates
+index.html
 /css/abstracts
 /css/components
 /css/cdb.scss
