@@ -7,7 +7,9 @@
     border-color: $primary-color;
     background: #e6e6ff;
   }
-
+  &-range {
+    color: #fff;
+  }
   &-secondary {
     color: $secondary-color;
     border-color: $secondary-color;
