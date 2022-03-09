@@ -1,169 +1,145 @@
 .stepper {
-  width: 100%;
-}
-.stepper .step-trigger {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.5;
-  color: #6c757d;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
-  background-color: transparent;
-  border: none;
-  border-radius: 0.25rem;
-  transition: background-color 0.15s ease-out, color 0.15s ease-out;
-}
-
-.stepper .step-trigger:not(:disabled):not(.disabled) {
-  cursor: pointer;
-}
-
-.stepper .step-trigger:disabled,
-.stepper .step-trigger.disabled {
-  pointer-events: none;
-  opacity: 0.65;
-}
-
-.stepper .step-trigger:focus {
-  color: #007bff;
-  outline: none;
-}
-
-.stepper .step-trigger:hover {
-  text-decoration: none;
-  background-color: transparent;
-}
-
-@media (max-width: 520px) {
-  .stepper .step-trigger {
-    flex-direction: column;
-    padding: 10px;
-  }
-}
-
-.stepper-header {
   display: flex;
-  align-items: center;
-}
-
-@media (max-width: 520px) {
-  .stepper-header {
-    margin: 0 -10px;
-    text-align: center;
-  }
-}
-
-.stepper-line,
-.stepper .line {
-  flex: 1 0 32px;
-  min-width: 1px;
-  min-height: 1px;
-  margin: auto;
-  background-color: rgb(0, 0, 0);
-}
-
-@media (max-width: 400px) {
-  .stepper-line,
-  .stepper .line {
-    flex-basis: 20px;
-  }
-}
-
-.stepper-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3em;
-  height: 3em;
-  padding: 0.5em 0;
-  margin: 0.25rem;
-  line-height: 1em;
-  color: #000;
-  border: 1px solid #000;
-
-  background-color: #ffffff;
-  border-radius: 1.5em;
-}
-
-.active .stepper-circle {
-  background-color: #000000;
-  color: #fff;
-}
-
-.stepper-content {
-  padding: 0 20px 20px;
-}
-
-@media (max-width: 520px) {
-  .stepper-content {
-    padding: 0;
-  }
-}
-
-.stepper.vertical {
-  display: flex;
-}
-
-.stepper.vertical .stepper-header {
+  position: relative;
   flex-direction: column;
-  align-items: stretch;
-  margin: 0;
+  width: 100%;
+  padding: 10px;
+  .steps-container {
+    height: 100%;
+    flex-direction: row;
+    .steps {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+      overflow-x: auto;
+      justify-content: space-between !important;
+      .step {
+        display: table-cell;
+        text-align: center;
+        position: relative;
+        min-width: 150px;
+        max-width: 150px;
+        .step-title {
+          display: flex;
+          align-items: center;
+          margin-left: 5px;
+          padding: 10px 0;
+          opacity: 0.8;
+          .step-number {
+            font-size: 30px;
+            font-weight: 600;
+          }
+          .step-text {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            margin-left: 10px;
+            text-align: start;
+            max-width: 150px;
+            word-wrap: break-word;
+          }
+        }
+        .step-indicator {
+          display: flex;
+          width: fit-content;
+          .step-divider {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            span {
+              margin: 0 2px;
+              border-radius: 6px;
+              transition: 0.4;
+              opacity: 0.8;
+              background-color: #9f9d9d;
+            }
+            span:nth-child(1) {
+              width: 6px;
+              height: 6px;
+            }
+            span:nth-child(2) {
+              width: 50px;
+              height: 6px;
+            }
+          }
+          .step-node {
+            position: relative;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            font-size: 16px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            transition: width 0.3;
+            align-items: center;
+            color: #fff;
+            background-color: #9f9d9d;
+          }
+        }
+        &.prev {
+          .step-node {
+            background-color: #333333;
+            color: #fff;
+            border: 2px solid #cccccc;
+          }
+          .step-title {
+            opacity: 1 !important;
+          }
+          .step-divider {
+            span:nth-child(1) {
+              background: #333333 !important;
+            }
+            span:nth-child(2) {
+              background: #333333 !important;
+            }
+          }
+        }
+        &.active {
+          .step-node {
+            background-color: #fff;
+            border: 2px solid #333333;
+            color: #333;
+          }
+          .step-title {
+            opacity: 1 !important;
+          }
+          .step-divider {
+            span:nth-child(1) {
+              background: #333333 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .stepper-content-container {
+    display: flex;
+    width: 100%;
+    .stepper-content {
+      width: 100%;
+      padding: 15px 10px;
+      display: none;
+      &.show {
+        display: block;
+      }
+    }
+  }
 }
 
-.stepper.vertical .stepper-pane,
-.stepper.vertical .content {
-  display: block;
+.fade-in {
+  animation: fadeIn 0.5s;
 }
-
-.stepper.vertical .stepper-pane:not(.fade),
-.stepper.vertical .content:not(.fade) {
-  display: block;
-  visibility: hidden;
-}
-
-.stepper-pane:not(.fade),
-.stepper .content:not(.fade) {
-  display: none;
-}
-
-.stepper .content.fade,
-.stepper-pane.fade {
-  visibility: hidden;
-  transition-duration: 0.3s;
-  transition-property: opacity;
-}
-
-.stepper-pane.fade.active,
-.stepper .content.fade.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-.stepper-pane.active:not(.fade),
-.stepper .content.active:not(.fade) {
-  display: block;
-  visibility: visible;
-}
-
-.stepper-pane.dstepper-block,
-.stepper .content.dstepper-block {
-  display: block;
-}
-
-.stepper:not(.vertical) .stepper-pane.dstepper-none,
-.stepper:not(.vertical) .content.dstepper-none {
-  display: none;
-}
-
-.vertical .stepper-pane.fade.dstepper-none,
-.vertical .content.fade.dstepper-none {
-  visibility: hidden;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
 }
