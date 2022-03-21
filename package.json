@@ -4,7 +4,7 @@
   "main": "js/cdb.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Devwares-Team/contrast-bootstrap-free.git"
+    "url": "git+https://github.com/Devwares-Team/contrast-bootstrap.git"
   },
   "scripts": {
     "build": "webpack"
@@ -12,8 +12,8 @@
   "author": "Devwares",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Devwares-Team/contrast-bootstrap-free/issues"
+    "url": "https://github.com/Devwares-Team/contrast-bootstrap/issues"
   },
-  "homepage": "https://github.com/Devwares-Team/contrast-bootstrap-free#readme",
-  "description": "Bootstrap 5 Multipurpose template, UI kit to build your next landing, admin, SAAS, prelaunch, etc project with a clean, well crafted template and UI components"
+  "homepage": "https://github.com/Devwares-Team/contrast-bootstrap#readme",
+  "description": "Well crafted Bootstrap 5 UI kit Library featuring over 2000+ basic components and 10000+ premium components for building mobile-first, responsive webistes and web apps using clean UI components"
 }

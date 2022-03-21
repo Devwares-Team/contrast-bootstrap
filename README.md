@@ -1,11 +1,11 @@
-# Contrast Design Bootstrap
+# Contrast Design Bootstrap 5 UI Kit Library
 
-> Bootstrap 5 Multipurpose template, UI kit to build your next landing, admin, SAAS, prelaunch, etc project with a clean, well crafted template and UI components
+> Well crafted Bootstrap 5 UI kit Library featuring over 2000+ basic components and 10000+ premium components for building mobile-first, responsive webistes and web apps using clean UI components
 
 [![NPM](https://img.shields.io/npm/v/cdbootstrap.svg)](https://www.npmjs.com/package/cdbootstrap) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![npm](https://img.shields.io/npm/dw/cdbootstrap)
+![npm](https://img.shields.io/npm/dm/cdbootstrap)
 
-## Install
+## Install via NPM
 
 ```bash
 npm install --save cdbootstrap
@@ -13,23 +13,47 @@ npm install --save cdbootstrap
 
 or
 
+## Install via YARN
+
 ```bash
 yarn add cdbootstrap
 ```
+or
 
-## Usage
+## Install via CDN
 
+Installation via CDN is one of the easiest methods of integrating CDBootstrap with your project. 
+
+Just copy the latest compiled JS script tag and CSS link tag to the application.
+
+ Add cdbootstrap to your project from our cdn directly into your html file
+
+ ### CSS
 ```jsx
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/css/cdb.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/js/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/js/cdb.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/bootstrap.min.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/cdb.min.css"/>
 ```
+
+### JS
+
+```jsx  
+<script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/popper.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
+
+```
+
+## Documentation for components
+
+[Check out the documentation here](https://www.devwares.com/docs/contrast/javascript/index)
+
 
 # Demo
 
-## Pages
+## Admin template Pages
 
 <a href="https://www.devwares.com/product/bootstrap-admin-contrast">
 <img src="https://res.cloudinary.com/devwares/image/upload/v1610800617/s1_opnshi.png" width="80%" height="auto"/>
@@ -194,13 +218,11 @@ yarn add cdbootstrap
 | Mac     | N/A                                                                                                                                                                                                               | supported                                                                                                                                                                                                         | supported                                                                                                                                                                                                     | supported                                                                                                                                                                                                     | supported                                                                                                                                                                                                 |
 | Windows | supported                                                                                                                                                                                                         | supported                                                                                                                                                                                                         | supported                                                                                                                                                                                                     | N/A                                                                                                                                                                                                           | supported                                                                                                                                                                                                 |
 
-## Documentation
 
-[Check out our documentation here](https://www.devwares.com/docs/contrast/javascript/index)
 
-## PRO Version
+## Premium Version
 
-[Contrast Design Bootstrap PRO](https://www.devwares.com/product/javscript/bootstrap-contrast-pro)
+[Contrast Design Bootstrap Premium](https://www.devwares.com/product/javscript/bootstrap-contrast-pro)
 
 ## License
 
@@ -218,12 +240,11 @@ See License in &lt;license.pdf&gt; © [Devwares](https://github.com/Devwares)
 
 ### Check out and star our GitHub repository
 
-- [Github](https://github.com/Devwares)
+- [Github](https://github.com/Devwares-Team/contrast-bootstrap)
 - Create pull requests
 - Submit bugs
 - Suggest new features
 - Help us Improve our documentation with updates
 
-We truly appreciate you all and everyone who has contributed to this project, as we continue to use and imporove this project.
 
-A massive thank you to everyone!
+Thank you for all the contributions!
