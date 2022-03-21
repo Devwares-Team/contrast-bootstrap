@@ -1,77 +1,807 @@
-.cs-form {
+.contrast-input {
+  &.input-group label {
+    top: 0;
+    margin-bottom: 0;
+  }
+  &.input-group .input-group-text {
+    background-color: #e0e0e0;
+  }
+  &.input-group .input-group-text.md-addon {
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+  }
+  &.input-group .form-control {
+    padding: 0.375rem 0.75rem;
+    margin: 0;
+  }
+  & {
     position: relative;
-    margin-bottom: 1.5rem;
-
-    input[type=date], input[type=datetime-local],
-    input[type=email], input[type=number], input[type=password],
-    input[type=search-md], input[type=search], input[type=tel],
-    input[type=text], input[type=time], input[type=url], textarea {
-        background-color: transparent;
-        border-radius: 0;
-        outline: none;
-        height: 3rem;
-        width: 100%;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        -webkit-transition: all .3s;
-        transition: all .3s
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
+  & {
+    input:not([type]),
+    input[type="text"]:not(.browser-default),
+    input[type="password"]:not(.browser-default),
+    input[type="email"]:not(.browser-default),
+    input[type="url"]:not(.browser-default),
+    input[type="time"]:not(.browser-default),
+    input[type="date"]:not(.browser-default),
+    input[type="datetime"]:not(.browser-default),
+    input[type="datetime-local"]:not(.browser-default),
+    input[type="tel"]:not(.browser-default),
+    input[type="number"]:not(.browser-default),
+    input[type="search"]:not(.browser-default),
+    input[type="phone"]:not(.browser-default),
+    input[type="search-md"],
+    textarea {
+      border-radius: 4px;
+      border: 1px solid #dadce0;
+      box-sizing: content-box;
+      border-radius: 4px;
+      box-shadow: none;
+      padding: 4px 10px;
+      min-height: calc(1.5em + 1rem + 4px);
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      &::placeholder {
+        color: #757575;
+        font-weight: 400;
+        font-size: inherit;
+        color: #757575;
+        cursor: text;
+        transition: color 0.2s ease-out;
+      }
     }
-
+    textarea {
+      padding: 10px !important;
+    }
+  }
+  &.checkbox,
+  &.radio {
+    margin: 0;
+    height: 20px;
+    width: 20px;
+    &.size-lg {
+      transform: scale(1.4);
+    }
+    &.size-sm {
+      transform: scale(0.6);
+    }
+    position: relative;
     label {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        transition: all 0.3s;
-        font-weight: normal;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      // border-radius: 4px;
+      cursor: pointer;
+      height: 20px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 20px;
     }
 
-    .form-control {
-        padding: 0.5rem 0.6rem;
+    input[type="checkbox"]:not(.browser-default),
+    input[type="radio"]:not(.browser-default) {
+      width: 20px;
+      height: 20px;
+      visibility: hidden;
+    }
+    input[type="radio"]:not(.browser-default) + label {
+      border-radius: 50%;
+    }
+    input[type="checkbox"]:not(.browser) + label:after {
+      border: 2px solid $primary-color;
+      border-top: none;
+      border-right: none;
+      content: "";
+      height: 6px;
+      left: 2px;
+      opacity: 0;
+      position: absolute;
+      top: 2px;
+      transform: rotate(-45deg);
+      width: 12px;
+    }
+    input[type="radio"]:not(.browser) + label:after {
+      border: 2px solid $primary-color;
+      border-radius: 50%;
+      content: "";
+      height: 6px;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+    }
 
-        &:focus {
-            border-color: $primary-color;
-            
+    input[type="checkbox"]:not(.browser-default):checked + label,
+    input[type="radio"]:not(.browser-default):checked + label {
+      background-color: $primary-color100;
+      border: 2px solid $primary-color;
+    }
+    input[type="checkbox"]:not(.browser-default):checked + label:after,
+    input[type="radio"]:not(.browser-default):checked + label:after {
+      opacity: 1;
+    }
+    &.input-color {
+      &-primary {
+        input[type="checkbox"]:not(.browser-default):checked + label,
+        input[type="radio"]:not(.browser-default):checked + label {
+          background-color: $primary-color100;
+          border: 2px solid $primary-color;
         }
 
-        &:focus ~ label {
-            left: 5px;
-            top: -10px;
-            background: $white-color;
-            padding: 0 5px;
-            font-size: 12px;
-            color: $primary-color;
+        input[type="checkbox"]:not(.browser-default):checked + label:after,
+        input[type="radio"]:not(.browser-default):checked + label:after {
+          border: 2px solid $primary-color;
         }
+        input[type="checkbox"]:not(.browser-default):checked + label:after {
+          border-top: none;
+          border-right: none;
+        }
+      }
+      &-secondary {
+        input[type="checkbox"]:not(.browser-default):checked + label,
+        input[type="radio"]:not(.browser-default):checked + label {
+          background-color: $secondary-color100;
+          border: 2px solid $secondary-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after,
+        input[type="radio"]:not(.browser-default):checked + label:after {
+          border: 2px solid $secondary-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after {
+          border-top: none;
+          border-right: none;
+        }
+      }
+      &-success {
+        input[type="checkbox"]:not(.browser-default):checked + label,
+        input[type="radio"]:not(.browser-default):checked + label {
+          background-color: $success-color100;
+          border: 2px solid $success-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after,
+        input[type="radio"]:not(.browser-default):checked + label:after {
+          border: 2px solid $success-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after {
+          border-top: none;
+          border-right: none;
+        }
+      }
+      &-danger {
+        input[type="checkbox"]:not(.browser-default):checked + label,
+        input[type="radio"]:not(.browser-default):checked + label {
+          background-color: $danger-color100;
+          border: 2px solid $danger-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after,
+        input[type="radio"]:not(.browser-default):checked + label:after {
+          border: 2px solid $danger-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after {
+          border-top: none;
+          border-right: none;
+        }
+      }
+      &-warning {
+        input[type="checkbox"]:not(.browser-default):checked + label,
+        input[type="radio"]:not(.browser-default):checked + label {
+          background-color: $warning-color100;
+          border: 2px solid $warning-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after,
+        input[type="radio"]:not(.browser-default):checked + label:after {
+          border: 2px solid $warning-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after {
+          border-top: none;
+          border-right: none;
+        }
+      }
+      &-info {
+        input[type="checkbox"]:not(.browser-default):checked + label,
+        input[type="radio"]:not(.browser-default):checked + label {
+          background-color: $info-color100;
+          border: 2px solid $info-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after,
+        input[type="radio"]:not(.browser-default):checked + label:after {
+          border: 2px solid $info-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after {
+          border-top: none;
+          border-right: none;
+        }
+      }
+      &-dark {
+        input[type="checkbox"]:not(.browser-default):checked + label,
+        input[type="radio"]:not(.browser-default):checked + label {
+          background-color: $dark-color100;
+          border: 2px solid $dark-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after,
+        input[type="radio"]:not(.browser-default):checked + label:after {
+          border: 2px solid $dark-color;
+        }
+        input[type="checkbox"]:not(.browser-default):checked + label:after {
+          border-top: none;
+          border-right: none;
+        }
+      }
     }
+  }
+  &.input-color-primary {
+    &.bg {
+      input:not([type]),
+      input[type="text"]:not(.browser-default),
+      input[type="password"]:not(.browser-default),
+      input[type="email"]:not(.browser-default),
+      input[type="url"]:not(.browser-default),
+      input[type="time"]:not(.browser-default),
+      input[type="date"]:not(.browser-default),
+      input[type="datetime"]:not(.browser-default),
+      input[type="datetime-local"]:not(.browser-default),
+      input[type="tel"]:not(.browser-default),
+      input[type="number"]:not(.browser-default),
+      input[type="search"]:not(.browser-default),
+      input[type="phone"]:not(.browser-default),
+      input[type="search-md"],
+      textarea {
+        &:focus:not([readonly]) {
+          background: $primary-color100;
+        }
+      }
+    }
+    input:not([type]),
+    input[type="text"]:not(.browser-default),
+    input[type="password"]:not(.browser-default),
+    input[type="email"]:not(.browser-default),
+    input[type="url"]:not(.browser-default),
+    input[type="time"]:not(.browser-default),
+    input[type="date"]:not(.browser-default),
+    input[type="datetime"]:not(.browser-default),
+    input[type="datetime-local"]:not(.browser-default),
+    input[type="tel"]:not(.browser-default),
+    input[type="number"]:not(.browser-default),
+    input[type="search"]:not(.browser-default),
+    input[type="phone"]:not(.browser-default),
+    input[type="search-md"],
+    textarea {
+      &:focus:not([readonly]) {
+        border: 1px solid $primary-color;
+        box-shadow: inset 0 0 0 1px $primary-color;
+        &::placeholder {
+          color: $primary-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
 
-    .prefix {
-        position: absolute;
-        width: 2rem;
-        font-size: 2rem;
-        -webkit-transition: color .2s;
-        transition: color .2s;
-        top:5px;
+  &.input-color-secondary {
+    &.bg {
+      input:not([type]),
+      input[type="text"]:not(.browser-default),
+      input[type="password"]:not(.browser-default),
+      input[type="email"]:not(.browser-default),
+      input[type="url"]:not(.browser-default),
+      input[type="time"]:not(.browser-default),
+      input[type="date"]:not(.browser-default),
+      input[type="datetime"]:not(.browser-default),
+      input[type="datetime-local"]:not(.browser-default),
+      input[type="tel"]:not(.browser-default),
+      input[type="number"]:not(.browser-default),
+      input[type="search"]:not(.browser-default),
+      input[type="phone"]:not(.browser-default),
+      input[type="search-md"],
+      textarea {
+        &:focus:not([readonly]) {
+          background: $secondary-color100;
+        }
+      }
     }
+    input:not([type]),
+    input[type="text"]:not(.browser-default),
+    input[type="password"]:not(.browser-default),
+    input[type="email"]:not(.browser-default),
+    input[type="url"]:not(.browser-default),
+    input[type="time"]:not(.browser-default),
+    input[type="date"]:not(.browser-default),
+    input[type="datetime"]:not(.browser-default),
+    input[type="datetime-local"]:not(.browser-default),
+    input[type="tel"]:not(.browser-default),
+    input[type="number"]:not(.browser-default),
+    input[type="search"]:not(.browser-default),
+    input[type="phone"]:not(.browser-default),
+    input[type="search-md"],
+    textarea {
+      &:focus:not([readonly]) {
+        border: 1px solid $secondary-color;
+        box-shadow: inset 0 0 0 1px $secondary-color;
+        &::placeholder {
+          color: $secondary-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &.input-color-success {
+    &.bg {
+      input:not([type]),
+      input[type="text"]:not(.browser-default),
+      input[type="password"]:not(.browser-default),
+      input[type="email"]:not(.browser-default),
+      input[type="url"]:not(.browser-default),
+      input[type="time"]:not(.browser-default),
+      input[type="date"]:not(.browser-default),
+      input[type="datetime"]:not(.browser-default),
+      input[type="datetime-local"]:not(.browser-default),
+      input[type="tel"]:not(.browser-default),
+      input[type="number"]:not(.browser-default),
+      input[type="search"]:not(.browser-default),
+      input[type="phone"]:not(.browser-default),
+      input[type="search-md"],
+      textarea {
+        &:focus:not([readonly]) {
+          background: $success-color100;
+        }
+      }
+    }
+    input:not([type]),
+    input[type="text"]:not(.browser-default),
+    input[type="password"]:not(.browser-default),
+    input[type="email"]:not(.browser-default),
+    input[type="url"]:not(.browser-default),
+    input[type="time"]:not(.browser-default),
+    input[type="date"]:not(.browser-default),
+    input[type="datetime"]:not(.browser-default),
+    input[type="datetime-local"]:not(.browser-default),
+    input[type="tel"]:not(.browser-default),
+    input[type="number"]:not(.browser-default),
+    input[type="search"]:not(.browser-default),
+    input[type="phone"]:not(.browser-default),
+    input[type="search-md"],
+    textarea {
+      &:focus:not([readonly]) {
+        border: 1px solid $success-color;
+        box-shadow: inset 0 0 0 1px $success-color;
+        &::placeholder {
+          color: $success-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
 
-    .prefix ~ input  {
-        margin-left: 2rem;
-        width: calc(100% - 2rem);
+  &.input-color-danger {
+    &.bg {
+      input:not([type]),
+      input[type="text"]:not(.browser-default),
+      input[type="password"]:not(.browser-default),
+      input[type="email"]:not(.browser-default),
+      input[type="url"]:not(.browser-default),
+      input[type="time"]:not(.browser-default),
+      input[type="date"]:not(.browser-default),
+      input[type="datetime"]:not(.browser-default),
+      input[type="datetime-local"]:not(.browser-default),
+      input[type="tel"]:not(.browser-default),
+      input[type="number"]:not(.browser-default),
+      input[type="search"]:not(.browser-default),
+      input[type="phone"]:not(.browser-default),
+      input[type="search-md"],
+      textarea {
+        &:focus:not([readonly]) {
+          background: $danger-color100;
+        }
+      }
     }
+    input:not([type]),
+    input[type="text"]:not(.browser-default),
+    input[type="password"]:not(.browser-default),
+    input[type="email"]:not(.browser-default),
+    input[type="url"]:not(.browser-default),
+    input[type="time"]:not(.browser-default),
+    input[type="date"]:not(.browser-default),
+    input[type="datetime"]:not(.browser-default),
+    input[type="datetime-local"]:not(.browser-default),
+    input[type="tel"]:not(.browser-default),
+    input[type="number"]:not(.browser-default),
+    input[type="search"]:not(.browser-default),
+    input[type="phone"]:not(.browser-default),
+    input[type="search-md"],
+    textarea {
+      &:focus:not([readonly]) {
+        border: 1px solid $danger-color;
+        box-shadow: inset 0 0 0 1px $danger-color;
+        &::placeholder {
+          color: $danger-color;
+          font-weight: 700;
+        }
+      }
+    }
+    input[type="checkbox"]:not(.browser-default),
+    input[type="radio"]:not(.browser-default) {
+      background: red;
+    }
+  }
+  &.input-color-warning {
+    &.bg {
+      input:not([type]),
+      input[type="text"]:not(.browser-default),
+      input[type="password"]:not(.browser-default),
+      input[type="email"]:not(.browser-default),
+      input[type="url"]:not(.browser-default),
+      input[type="time"]:not(.browser-default),
+      input[type="date"]:not(.browser-default),
+      input[type="datetime"]:not(.browser-default),
+      input[type="datetime-local"]:not(.browser-default),
+      input[type="tel"]:not(.browser-default),
+      input[type="number"]:not(.browser-default),
+      input[type="search"]:not(.browser-default),
+      input[type="phone"]:not(.browser-default),
+      input[type="search-md"],
+      textarea {
+        &:focus:not([readonly]) {
+          background: $warning-color100;
+        }
+      }
+    }
+    input:not([type]),
+    input[type="text"]:not(.browser-default),
+    input[type="password"]:not(.browser-default),
+    input[type="email"]:not(.browser-default),
+    input[type="url"]:not(.browser-default),
+    input[type="time"]:not(.browser-default),
+    input[type="date"]:not(.browser-default),
+    input[type="datetime"]:not(.browser-default),
+    input[type="datetime-local"]:not(.browser-default),
+    input[type="tel"]:not(.browser-default),
+    input[type="number"]:not(.browser-default),
+    input[type="search"]:not(.browser-default),
+    input[type="phone"]:not(.browser-default),
+    input[type="search-md"],
+    textarea {
+      &:focus:not([readonly]) {
+        border: 1px solid $warning-color;
+        box-shadow: inset 0 0 0 1px $warning-color;
+        &::placeholder {
+          color: $warning-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &.input-color-info {
+    &.bg {
+      input:not([type]),
+      input[type="text"]:not(.browser-default),
+      input[type="password"]:not(.browser-default),
+      input[type="email"]:not(.browser-default),
+      input[type="url"]:not(.browser-default),
+      input[type="time"]:not(.browser-default),
+      input[type="date"]:not(.browser-default),
+      input[type="datetime"]:not(.browser-default),
+      input[type="datetime-local"]:not(.browser-default),
+      input[type="tel"]:not(.browser-default),
+      input[type="number"]:not(.browser-default),
+      input[type="search"]:not(.browser-default),
+      input[type="phone"]:not(.browser-default),
+      input[type="search-md"],
+      textarea {
+        &:focus:not([readonly]) {
+          background: $info-color100;
+        }
+      }
+    }
+    input:not([type]),
+    input[type="text"]:not(.browser-default),
+    input[type="password"]:not(.browser-default),
+    input[type="email"]:not(.browser-default),
+    input[type="url"]:not(.browser-default),
+    input[type="time"]:not(.browser-default),
+    input[type="date"]:not(.browser-default),
+    input[type="datetime"]:not(.browser-default),
+    input[type="datetime-local"]:not(.browser-default),
+    input[type="tel"]:not(.browser-default),
+    input[type="number"]:not(.browser-default),
+    input[type="search"]:not(.browser-default),
+    input[type="phone"]:not(.browser-default),
+    input[type="search-md"],
+    textarea {
+      &:focus:not([readonly]) {
+        border: 1px solid $info-color;
+        box-shadow: inset 0 0 0 1px $info-color;
+        &::placeholder {
+          color: $info-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &.input-color-dark {
+    &.bg {
+      input:not([type]),
+      input[type="text"]:not(.browser-default),
+      input[type="password"]:not(.browser-default),
+      input[type="email"]:not(.browser-default),
+      input[type="url"]:not(.browser-default),
+      input[type="time"]:not(.browser-default),
+      input[type="date"]:not(.browser-default),
+      input[type="datetime"]:not(.browser-default),
+      input[type="datetime-local"]:not(.browser-default),
+      input[type="tel"]:not(.browser-default),
+      input[type="number"]:not(.browser-default),
+      input[type="search"]:not(.browser-default),
+      input[type="phone"]:not(.browser-default),
+      input[type="search-md"],
+      textarea {
+        &:focus:not([readonly]) {
+          background: $dark-color100;
+        }
+      }
+    }
+    input:not([type]),
+    input[type="text"]:not(.browser-default),
+    input[type="password"]:not(.browser-default),
+    input[type="email"]:not(.browser-default),
+    input[type="url"]:not(.browser-default),
+    input[type="time"]:not(.browser-default),
+    input[type="date"]:not(.browser-default),
+    input[type="datetime"]:not(.browser-default),
+    input[type="datetime-local"]:not(.browser-default),
+    input[type="tel"]:not(.browser-default),
+    input[type="number"]:not(.browser-default),
+    input[type="search"]:not(.browser-default),
+    input[type="phone"]:not(.browser-default),
+    input[type="search-md"],
+    textarea {
+      &:focus:not([readonly]) {
+        border: 1px solid $dark-color;
+        box-shadow: inset 0 0 0 1px $dark-color;
+        &::placeholder {
+          color: $dark-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
 
-    .prefix ~ label {
-        margin-left: 2rem;
-    }
-}
+  & .form-control {
+    height: auto;
+    padding: 0.6rem 0 0.4rem 0;
+    margin: 0 0 0.5rem 0;
+    background-color: transparent;
+  }
+  & .form-control:focus {
+    box-shadow: none;
+  }
+  & .form-control:disabled,
+  & .form-control[readonly] {
+    background-color: transparent;
+    border-bottom: 1px solid #bdbdbd;
+  }
+  & label.active {
+    font-weight: 700;
+  }
+  & .prefix {
+    top: 0.25rem;
+    font-size: 1.75rem;
+  }
+  & .prefix ~ input,
+  & .prefix ~ textarea {
+    width: calc(100% - 2.5rem);
+    margin-left: 2.5rem;
+  }
+  & .prefix ~ label {
+    margin-left: 2.5rem;
+  }
+  & .prefix ~ .form-text {
+    margin-left: 2.6rem;
+  }
+  & .prefix {
+    position: absolute;
+    transition: color 0.2s;
+  }
+  & .prefix.active {
+    color: #4285f4;
+  }
+  textarea {
+    padding: 0;
+    overflow-y: hidden;
+  }
 
-.form-sm {
-    input[type=date], input[type=datetime-local],
-    input[type=email], input[type=number], input[type=password],
-    input[type=search-md], input[type=search], input[type=tel],
-    input[type=text], input[type=time], input[type=url], textarea {
-        height: 1.5rem;
+  @-webkit-keyframes autofill {
+    to {
+      color: #495057;
+      background: transparent;
     }
-
-    label {
-        top: 5px;
-        font-size: 13px;
+  }
+  @keyframes autofill {
+    to {
+      color: #495057;
+      background: transparent;
     }
+  }
+  &.input-outline input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  &.input-outline .form-control {
+    padding: 4px 10px;
+  }
+  &.input-outline label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding-left: 10px;
+    font-size: 1rem;
+    color: #757575;
+    cursor: text;
+    transition: transform 0.2s ease-out, color 0.2s ease-out;
+    transform: translateY(-50%);
+    transform-origin: 0% 100%;
+  }
+  &.input-outline label.active {
+    font-weight: 700;
+    // background: #fff;
+  }
+  &.input-outline .prefix {
+    position: absolute;
+    top: 0.6rem;
+    font-size: 20px;
+    transition: color 0.2s;
+  }
+  &.input-outline .prefix:focus {
+    color: #4285f4;
+  }
+  &.input-outline .prefix ~ input,
+  &.input-outline .prefix ~ textarea {
+    width: calc(100% - 2rem);
+    margin-left: 2rem;
+  }
+  &.input-outline .prefix ~ label {
+    margin-left: 2rem;
+  }
+  &.input-outline .prefix ~ .form-text {
+    margin-left: 2.1rem;
+  }
+  &.input-outline .character-counter {
+    margin-top: -0.5rem;
+  }
+  &.size-bg input[type="text"],
+  &.size-bg input[type="password"],
+  &.size-bg input[type="email"],
+  &.size-bg input[type="url"],
+  &.size-bg input[type="time"],
+  &.size-bg input[type="date"],
+  &.size-bg input[type="datetime-local"],
+  &.size-bg input[type="tel"],
+  &.size-bg input[type="number"],
+  &.size-bg input[type="search-md"],
+  &.size-bg input[type="search"],
+  &.size-bg textarea.md-textarea {
+    box-sizing: border-box;
+    padding: 10px 5px;
+    background: #f5f5f5 no-repeat;
+    background-image: linear-gradient(to bottom, #4285f4, #4285f4),
+      linear-gradient(to bottom, #ced4da, #ced4da);
+    background-position: 50% 100%, 50% 100%;
+    background-size: 0 2px, 100% 1px;
+    border: 0;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  }
+  &.size-bg
+    > input[type]:-webkit-autofill:not(.browser-default):not([type="search"])
+    + label,
+  &.size-bg > input[type="time"]:not(.browser-default) + label {
+    font-size: 0.8rem;
+    transform: translateY(-12px);
+    transform-origin: 0 0;
+  }
+  &.size-bg .form-control {
+    padding: 1.1rem 0.7rem 0.4rem !important;
+  }
+  &.size-bg label {
+    top: 0;
+    padding-left: 0.7rem;
+    font-size: 1rem;
+    transition: transform 0.2s ease-out, color 0.2s ease-out;
+    transform: translateY(13px);
+    transform-origin: 0% 100%;
+  }
+  &.size-bg label.active {
+    padding-left: 0.75rem;
+    font-weight: 500;
+    transform: translateY(-3px) scale(0.8);
+  }
+  & .form-control.is-invalid,
+  .was-validated & .form-control:invalid {
+    padding-right: 0;
+  }
+  & .form-control.is-valid,
+  .was-validated & .form-control:valid {
+    padding-right: 0;
+  }
+  .needs-validation & label {
+    left: 0.3rem;
+  }
+  .custom-file-input:lang(es) ~ .custom-file-label::after {
+    content: "Elegir";
+  }
+  .custom-file-input:lang(pl-pl) ~ .custom-file-label::after {
+    content: "Wybierz";
+  }
+  .custom-file-input:lang(fr) ~ .custom-file-label::after {
+    content: "Choisir";
+  }
+  .custom-file-input:lang(in) ~ .custom-file-label::after {
+    content: "Pilih";
+  }
+  .custom-file-input:lang(zh) ~ .custom-file-label::after {
+    content: "選擇";
+  }
+  .custom-file-input:lang(de) ~ .custom-file-label::after {
+    content: "Wählen";
+  }
+  .custom-file-input:lang(ru) ~ .custom-file-label::after {
+    content: "Выбрать";
+  }
+  & > label {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  & .form-control {
+    box-sizing: border-box !important;
+  }
+  & .input-prefix {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.2s;
+    color: rgba(0, 0, 0, 0.87);
+    pointer-events: none;
+  }
+  & .input-prefix.active {
+    color: #4285f4;
+  }
+  &.input-with-pre-icon label {
+    left: 36px;
+    right: initial;
+  }
+  &.input-with-pre-icon .input-prefix {
+    left: 16px;
+    right: initial;
+  }
+  &.input-with-pre-icon .form-control {
+    padding-left: 2.7rem !important;
+  }
+  &.input-with-post-icon .input-prefix {
+    right: 16px;
+    left: initial;
+  }
+  &.input-with-post-icon .form-control {
+    padding-right: 2.7rem !important;
+  }
+  &.input-with-post-icon.input-with-pre-icon .input-prefix {
+    right: 16px;
+    left: initial;
+  }
+  &.input-with-post-icon.input-with-pre-icon .input-prefix:first-of-type {
+    left: 16px;
+    right: initial;
+  }
+  &.input-with-post-icon.input-with-pre-icon .form-control {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
 }
