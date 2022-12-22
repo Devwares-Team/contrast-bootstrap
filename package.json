@@ -7,7 +7,8 @@
     "url": "git+https://github.com/Devwares-Team/contrast-bootstrap.git"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "release": "standard-version && git push --follow-tags && npm run build && npm publish"
   },
   "author": "Devwares",
   "license": "MIT",
@@ -15,5 +16,8 @@
     "url": "https://github.com/Devwares-Team/contrast-bootstrap/issues"
   },
   "homepage": "https://github.com/Devwares-Team/contrast-bootstrap#readme",
-  "description": "Well crafted Bootstrap 5 UI kit Library featuring over 2000+ basic components and 10000+ premium components for building mobile-first, responsive webistes and web apps using clean UI components"
+  "description": "Well crafted Bootstrap 5 UI kit Library featuring over 2000+ basic components and 10000+ premium components for building mobile-first, responsive webistes and web apps using clean UI components",
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
 }
