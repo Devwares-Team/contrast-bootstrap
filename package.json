@@ -1,6 +1,6 @@
 {
   "name": "cdbootstrap",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "main": "js/cdb.js",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "release": "standard-version && git push --follow-tags && npm run build && npm publish"
+    "release": "standard-version && git push --follow-tags && npm pack && npm publish"
   },
   "author": "Devwares",
   "license": "MIT",
