@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "release": "standard-version && git push --follow-tags && npm pack && npm publish"
+    "release": "standard-version && git push --follow-tags && npm run build && npm pack && npm publish"
   },
   "author": "Devwares",
   "license": "MIT",
@@ -18,6 +18,11 @@
   "homepage": "https://github.com/Devwares-Team/contrast-bootstrap#readme",
   "description": "Well crafted Bootstrap 5 UI kit Library featuring over 2000+ basic components and 10000+ premium components for building mobile-first, responsive webistes and web apps using clean UI components",
   "devDependencies": {
-    "standard-version": "^9.5.0"
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^9.1.2",
+    "standard-version": "^9.5.0",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
   }
 }
